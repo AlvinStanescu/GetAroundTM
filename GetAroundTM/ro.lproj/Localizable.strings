@@ -1,0 +1,110 @@
+/* No comment provided by engineer. */
+" at " = " făcută la ora ";
+
+/* No comment provided by engineer. */
+" used." = " .";
+
+/* No comment provided by engineer. */
+". Download?" = ". Descarcă?";
+
+/* No comment provided by engineer. */
+"Add to favorites" = "Adaugă la preferate";
+
+/* No comment provided by engineer. */
+"Added" = "Adăugată";
+
+/* No comment provided by engineer. */
+"Bus Lines" = "Autobuz";
+
+"Check for new database version" = "Actualizează baza de date";
+"Remove Ads" = "Elimină ad-urile";
+"Credits" = "Despre aplicație";
+
+/* No comment provided by engineer. */
+"Database built on " = "Bază de date din ";
+
+/* No comment provided by engineer. */
+"Database server is down." = "Server-ul de baze de date nu poate fi contactat.";
+
+/* No comment provided by engineer. */
+"E/M Lines" = "Express/Metro";
+
+/* No comment provided by engineer. */
+"Favorite Stations" = "Stațiile preferate";
+"Favorites" = "Preferate";
+/* No comment provided by engineer. */
+"Find me" = "Găsește-mă";
+
+/* No comment provided by engineer. */
+"First Arrival" = "Prima sosire";
+
+/* No comment provided by engineer. */
+"GetAroundTM v2.0\n\nCode - Alvin Stanescu\nData - Kriszti Cseh, Chagall, Florin B.\n\nIcons created by the Noun Project and users Reinaldo Weber, Bernoit Champy and Sven Hofmann from the Noun Project used.\n\nThis application is not made by RATT and comes with no warranty whatsoever. Arrival data is received via the Internet from RATT's own servers.\n\nAll rights reserved.\n© 2011-2012" = "GetAroundTM v2.0\n\nCod - Alvin Stănescu\nDate - Kriszti Cseh, Chagall, Florin B.\n\nIcoane creeate de The Noun Project și utilizatorii lui, Reinaldo Weber, Bernoit Champy and Sven Hofmann au fost folosite în cadrul aplicației.\n\nAceastă aplicație nu este făcută de RATT și vine fără absolut nici o garanție. Timpii de sosire sunt preluați prin Internet de la serverele RATT.\n\Toate drepturile rezervate.\n© 2011-2012";
+
+/* No comment provided by engineer. */
+"Loading" = "Se încarcă";
+
+/* No comment provided by engineer. */
+"Loading... " = "Se încarcă... ";
+
+/* No comment provided by engineer. */
+"Maps" = "Hărți";
+
+/* No comment provided by engineer. */
+"New version" = "Versiune nouă";
+
+/* No comment provided by engineer. */
+"New version found, built on " = "S-a găsit o versiune nouă, din ";
+
+/* No comment provided by engineer. */
+"No" = "Nu";
+
+/* No comment provided by engineer. */
+"No new version" = "Nu s-a găsit o versiune mai nouă.";
+
+/* No comment provided by engineer. */
+"Please try again later." = "Vă rugăm încercați mai târziu.";
+
+/* No comment provided by engineer. */
+"Retrieval Error" = "Eroare la preluare";
+
+/* No comment provided by engineer. */
+"Routes" = "Rute";
+
+"Route" = "Rută";
+
+/* No comment provided by engineer. */
+"Second Arrival" = "Următoarea sosire";
+
+/* No comment provided by engineer. */
+"Stations" = "Stații";
+
+/* No comment provided by engineer. */
+"The database was successfully updated." = "Baza de date a fost actualizată.";
+
+/* No comment provided by engineer. */
+"There was an error while retrieving the data. Check your internet connection." = "A apărut o eroare în timpul preluării datelor. Verificați conexiunea dvs. la internet.";
+
+/* No comment provided by engineer. */
+"Timeout!" = "Timeout!";
+
+/* No comment provided by engineer. */
+"Tram Lines" = "Tramvai";
+
+/* No comment provided by engineer. */
+"Trolley Lines" = "Troleibuz";
+
+/* No comment provided by engineer. */
+"Update finished" = "Actualizare terminată";
+
+/* No comment provided by engineer. */
+"Yes" = "Da";
+
+/* No comment provided by engineer. */
+"You already have the latest database version." = "Aveți deja ultima versiune.";
+
+"Search Results" = "Rezultate";
+"Route - All" = "Rută - Toate";
+"\n\nNo stations or routes added.\n\nYou can add your favorites stations and routes here for easy access by tapping the \"Add to Favorites\" button for your most frequently used station or route." = "\n\nNu ați adăugat nici o stație sau rută la preferate.\n\nPuteți adăuga stațiile și rutele dvs. preferate pentru acces ușor prin atingerea butonului \"Adaugă la preferate\" pentru rutele sau stațiile cele mai des folosite de dvs.";
+"All" = "Toate";
+"Station Map" = "Harta stațiilor";

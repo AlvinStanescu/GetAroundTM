@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>DatabaseFile</key>
+	<string>StationsData.plist</string>
+	<key>DatabaseFileDate</key>
+	<date>2012-09-28T06:51:23Z</date>
+</dict>
+</plist>
