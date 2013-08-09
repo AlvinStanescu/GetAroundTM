@@ -9,12 +9,12 @@
 #import "PersistentAdTabBarController.h"
 #import "Constants.h"
 
-static BOOL adLoaded = NO;
+
 
 @implementation PersistentAdTabBarController
 
-@synthesize adBannerFrame;
-@synthesize request = _request;
+
+
 
 @synthesize junctionsNavigationController = _junctionsNavigationController;
 @synthesize routesNavigationController = _routesNavigationController;
@@ -22,10 +22,10 @@ static BOOL adLoaded = NO;
 @synthesize mapsViewController = _mapsViewController;
 @synthesize favoritesViewController = _favoritesViewController;
 
-#define MY_PUBLISHER_ID @"a14f2e556b63578"
-#define MY_IPHONE_3GS_UUID @"3e5b77b157815877058a95f8e7e2db266c8ccaae"
+
+
 #define TABBAR_HEIGHT   49.0
-#define AD_REFRESH_PERIOD 30.0
+//#define AD_REFRESH_PERIOD 30.0
 
 - (id)init
 {
@@ -94,8 +94,7 @@ static BOOL adLoaded = NO;
 
 - (void)viewDidUnload {
 	[super viewDidUnload];
-    adBannerView.delegate = nil;
-    adBannerView = nil;
+  
     self.favoritesViewController = nil;
     self.junctionsNavigationController = nil;
     self.routesNavigationController = nil;
@@ -128,119 +127,78 @@ static BOOL adLoaded = NO;
 - (void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:YES];
-    [self removeAdFromDisplay];
+
 }
 
 - (void)requestNewAd:(NSTimer*)timer
 {
-    if (adBannerView) {
-        _request = [GADRequest request];
-        _request.testDevices = [NSArray arrayWithObjects:
-                               GAD_SIMULATOR_ID,
-                               nil];
-        
-        CLLocation *lastLocation = nil;
-        
-        if ([[[self.junctionsNavigationController viewControllers] objectAtIndex:0] respondsToSelector:@selector(getLastLocation)])
-        {
-            lastLocation = [(JunctionsViewController*)[[self.junctionsNavigationController viewControllers] objectAtIndex:0] getLastLocation];
-        }
-        if (lastLocation) {
-            [_request setLocationWithLatitude:lastLocation.coordinate.latitude
-                                   longitude:lastLocation.coordinate.longitude
-                                    accuracy:lastLocation.horizontalAccuracy];
-        }
-        else
-        {
-            // default to Timisoara, Romania
-            [_request setLocationWithLatitude:45.749444 longitude:21.227222 accuracy:10000.0];
-        }
-        [adBannerView loadRequest:_request];
-    }
+//    if (adBannerView) {
+//        _request = [GADRequest request];
+//        _request.testDevices = [NSArray arrayWithObjects:
+//                               GAD_SIMULATOR_ID,
+//                               nil];
+//        
+//        CLLocation *lastLocation = nil;
+//        
+//        if ([[[self.junctionsNavigationController viewControllers] objectAtIndex:0] respondsToSelector:@selector(getLastLocation)])
+//        {
+//            lastLocation = [(JunctionsViewController*)[[self.junctionsNavigationController viewControllers] objectAtIndex:0] getLastLocation];
+//        }
+//        if (lastLocation) {
+//            [_request setLocationWithLatitude:lastLocation.coordinate.latitude
+//                                   longitude:lastLocation.coordinate.longitude
+//                                    accuracy:lastLocation.horizontalAccuracy];
+//        }
+//        else
+//        {
+//            // default to Timisoara, Romania
+//            [_request setLocationWithLatitude:45.749444 longitude:21.227222 accuracy:10000.0];
+//        }
+//        [adBannerView loadRequest:_request];
+//    }
 }
 
-- (void)adViewDidReceiveAd:(GADBannerView *)bannerView
-{
-    [self displayAd];
-}
-
-- (void)refreshAd:(NSTimer*)timer
-{
-    [self removeAdFromDisplay];
-    [self requestNewAd:nil];
-}
 
 - (void)displayAd
 {
-    adLoaded = YES;
-    for (UIView *view in self.view.subviews) {
-        if (![view isKindOfClass:[UITabBar class]]) {
-            if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPhone)
-            {
-                [view setFrame:CGRectMake(0.0, 0.0, [UIScreen mainScreen].bounds.size.width, view.frame.size.height - GAD_SIZE_320x50.height)];
-            }
-            else
-            {
-                [view setFrame:CGRectMake(0.0, 0.0, [UIScreen mainScreen].bounds.size.width, view.frame.size.height - GAD_SIZE_728x90.height)];
-            }
-            [view setNeedsDisplay];
-        }
-    }
-
-    if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPhone)
-    {
-        adBannerView.frame = CGRectMake(0.0, self.view.frame.size.height - TABBAR_HEIGHT - GAD_SIZE_320x50.height, GAD_SIZE_320x50.width, GAD_SIZE_320x50.height);
-    }
-    else
-    {
-        adBannerView.frame = CGRectMake(20.0, self.view.frame.size.height - TABBAR_HEIGHT - GAD_SIZE_728x90.height, GAD_SIZE_728x90.width, GAD_SIZE_728x90.height);
-    }
-
-    [[self view] addSubview:adBannerView];
-#ifdef DEBUG
-    NSLog(@"Received ad.");    
-#endif
-    if (reloadAdTimer != nil) [reloadAdTimer invalidate];
-    reloadAdTimer = [NSTimer scheduledTimerWithTimeInterval:AD_REFRESH_PERIOD 
-                                     target:self 
-                                    selector:@selector(refreshAd:) 
-                                   userInfo:nil 
-                                    repeats:NO];
+//    adLoaded = YES;
+//    for (UIView *view in self.view.subviews) {
+//        if (![view isKindOfClass:[UITabBar class]]) {
+//            if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPhone)
+//            {
+//                [view setFrame:CGRectMake(0.0, 0.0, [UIScreen mainScreen].bounds.size.width, view.frame.size.height - GAD_SIZE_320x50.height)];
+//            }
+//            else
+//            {
+//                [view setFrame:CGRectMake(0.0, 0.0, [UIScreen mainScreen].bounds.size.width, view.frame.size.height - GAD_SIZE_728x90.height)];
+//            }
+//            [view setNeedsDisplay];
+//        }
+//    }
+//
+//    if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPhone)
+//    {
+//        adBannerView.frame = CGRectMake(0.0, self.view.frame.size.height - TABBAR_HEIGHT - GAD_SIZE_320x50.height, GAD_SIZE_320x50.width, GAD_SIZE_320x50.height);
+//    }
+//    else
+//    {
+//        adBannerView.frame = CGRectMake(20.0, self.view.frame.size.height - TABBAR_HEIGHT - GAD_SIZE_728x90.height, GAD_SIZE_728x90.width, GAD_SIZE_728x90.height);
+//    }
+//
+//    [[self view] addSubview:adBannerView];
+//#ifdef DEBUG
+//    NSLog(@"Received ad.");    
+//#endif
+//    if (reloadAdTimer != nil) [reloadAdTimer invalidate];
+//    reloadAdTimer = [NSTimer scheduledTimerWithTimeInterval:AD_REFRESH_PERIOD 
+//                                     target:self 
+//                                    selector:@selector(refreshAd:) 
+//                                   userInfo:nil 
+//                                    repeats:NO];
 }
 
-- (void)adView:(GADBannerView *)bannerView
-didFailToReceiveAdWithError:(GADRequestError *)error
-{
-    adLoaded = NO;
-    adBannerView = nil;
-    [NSTimer scheduledTimerWithTimeInterval:AD_REFRESH_PERIOD target:self selector:@selector(requestNewAd:) userInfo:nil repeats:NO];
-}
 
-- (void)removeAdFromDisplay
-{
-    if ((adBannerView!=nil) && (adLoaded)) {
-        for (UIView *view in self.view.subviews) {
-            if (![view isKindOfClass:[UITabBar class]]) {
-                if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPhone)
-                {
-                    [view setFrame:CGRectMake(0.0, 0.0, [UIScreen mainScreen].bounds.size.width, view.frame.size.height + GAD_SIZE_320x50.height)];
-                }
-                else
-                {
-                    [view setFrame:CGRectMake(0.0, 0.0, [UIScreen mainScreen].bounds.size.width, view.frame.size.height + GAD_SIZE_728x90.height)];
 
-                }
-                [view setNeedsDisplay];
-                break;
-            }
-        }
-        [adBannerView removeFromSuperview];
-        adLoaded = NO;
-    }
-}
 
-- (void)stopTimer
-{
-    [reloadAdTimer invalidate];
-}
+
 @end

@@ -162,9 +162,7 @@
     NSString *productIdentifier = (NSString *) notification.object;
     NSLog(@"Purchased: %@", productIdentifier);
     
-    [self.tableView reloadData];
-    [(PersistentAdTabBarController *)(self.navigationController.tabBarController) stopTimer];
-    [(PersistentAdTabBarController *)(self.navigationController.tabBarController) removeAdFromDisplay];
+ 
     
 }
 

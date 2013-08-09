@@ -251,7 +251,7 @@
 #pragma mark - Credits
 
 - (IBAction)showCredits:(id)sender {
-    NSString *credits = NSLocalizedString(@"GetAroundTM v2.0\n\nCode - Alvin Stanescu\nData - Kriszti Cseh, Chagall, Florin B.\n\nIcons created by the Noun Project and users Reinaldo Weber, Bernoit Champy and Sven Hofmann from the Noun Project used.\n\nThis application is not made by RATT and comes with no warranty whatsoever. Arrival data is received via the Internet from RATT's own servers.\n\nAll rights reserved.\n© 2011-2012", nil);
+    NSString *credits = NSLocalizedString(@"GetAroundTM v2.0\n\nPublisher - Marius FANU\nCode - Alvin Stanescu\nData - Kriszti Cseh, Chagall, Florin B.\n\nIcons created by the Noun Project and users Reinaldo Weber, Bernoit Champy and Sven Hofmann from the Noun Project used.\n\nThis application is not made by RATT and comes with no warranty whatsoever. Arrival data is received via the Internet from RATT's own servers.\n\nAll rights reserved.\n© 2011-2012", nil);
 
     UIAlertView *creditsView = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Credits", nil) message:credits delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
     [creditsView show];

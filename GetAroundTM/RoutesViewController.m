@@ -10,7 +10,6 @@
 #import "TappableImageView.h"
 #import "TappableImageViewDelegate.h"
 #import "RouteContainerViewController.h"
-#import "GADBannerView.h"
 #import <QuartzCore/QuartzCore.h>
 
 #define NAVBAR_HEIGHT 44.0
@@ -63,16 +62,16 @@
 {
     [super viewDidLoad];
     float size;
-    float adSize = 0.0;
+//    float adSize = 0.0;
     if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPhone)
     {
         size = [UIScreen mainScreen].bounds.size.width == 320.0?TAPPABLE_IV_IPHONE:TAPPABLE_IV_RETINA;
-        adSize = GAD_SIZE_320x50.height;
+//        adSize = GAD_SIZE_320x50.height;
     }
     else
     {
         size = TAPPABLE_IV_IPAD;
-        adSize = GAD_SIZE_728x90.height;
+//        adSize = GAD_SIZE_728x90.height;
     }
     CGFloat leftX, rightX, topY, bottomY;/*
     if (![[NSUserDefaults standardUserDefaults] boolForKey:@"com.thedamn3d.GetAroundTM.adremoval"])
